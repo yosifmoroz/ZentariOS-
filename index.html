@@ -10,6 +10,7 @@
             --bg: #0f172a;
             --card: #1e293b;
             --text: #f8fafc;
+            --accent: #334155;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,37 +37,48 @@
             display: inline-block;
             margin-bottom: 20px;
         }
-        h1 {
-            font-size: 3rem;
-            margin: 10px 0;
-            color: var(--primary);
-        }
-        .tagline {
-            font-size: 1.2rem;
-            color: #94a3b8;
-            margin-bottom: 40px;
-        }
+        h1 { font-size: 3rem; margin: 10px 0; color: var(--primary); }
+        h2 { color: var(--primary); margin-top: 40px; }
+        .tagline { font-size: 1.2rem; color: #94a3b8; margin-bottom: 40px; }
+        
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin-top: 20px;
         }
         .card {
             background: var(--card);
             padding: 20px;
             border-radius: 12px;
-            border: 1px solid #334155;
+            border: 1px solid var(--accent);
         }
-        .card h3 {
-            margin-top: 0;
-            color: var(--primary);
+        
+        .download-box {
+            background: #1e293b;
+            border: 2px dashed #475569;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
         }
-        footer {
-            margin-top: 50px;
-            color: #64748b;
-            font-size: 0.9rem;
+        .btn-disabled {
+            background: #475569;
+            color: #94a3b8;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: not-allowed;
+            font-weight: bold;
         }
+        
+        .req-list {
+            text-align: left;
+            display: inline-block;
+            margin-top: 10px;
+            color: #cbd5e1;
+        }
+
+        footer { margin-top: 60px; color: #64748b; font-size: 0.9rem; padding-bottom: 40px; }
     </style>
 </head>
 <body>
@@ -80,24 +92,35 @@
         <div class="grid">
             <div class="card">
                 <h3>Arch-Powered</h3>
-                <p>Built with the Arch package manager (pacman) for the latest software and stability.</p>
+                <p>Built with the Arch package manager (pacman) for the latest software.</p>
             </div>
             <div class="card">
                 <h3>KDE Plasma</h3>
-                <p>Featuring a beautiful KDE Plasma desktop running on Wayland for peak performance.</p>
+                <p>A beautiful KDE Plasma desktop running on Wayland.</p>
             </div>
-            <div class="card">
-                <h3>Easy to Use</h3>
-                <p>Designed from the ground up to be accessible for everyone, from pros to beginners.</p>
-            </div>
+        </div>
+
+        <h2>System Requirements</h2>
+        <div class="card">
+            <p><i>The OS is currently in development and not ready for daily use.</i></p>
+            <ul class="req-list">
+                <li><b>CPU:</b> 64-bit Processor (x86_64)</li>
+                <li><b>RAM:</b> 2GB Minimum (4GB Recommended)</li>
+                <li><b>Storage:</b> 20GB Free Space</li>
+                <li><b>Graphics:</b> GPU with Wayland support</li>
+            </ul>
+        </div>
+
+        <h2>Download</h2>
+        <div class="download-box">
+            <p>ZentariOS is not yet available for public download.</p>
+            <span class="btn-disabled">No ISO, yet</span>
         </div>
 
         <footer>
             <p>&copy; 2024 ZentariOS Project by yosifmoroz</p>
-            <p>Check back soon for the first ISO release!</p>
         </footer>
     </div>
 
 </body>
-  </html>
-  
+</html>
