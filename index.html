@@ -78,6 +78,18 @@
             color: #cbd5e1;
         }
 
+        /* Стил за линковете в новата карта */
+        .contact-link {
+            color: var(--primary);
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
         footer { margin-top: 60px; color: #64748b; font-size: 0.9rem; padding-bottom: 40px; }
     </style>
 </head>
@@ -113,6 +125,14 @@
                 <li><b>Storage:</b> 20GB Free Space</li>
                 <li><b>Graphics:</b> GPU with Wayland support</li>
             </ul>
+        </div>
+
+        <!-- НОВАТА КАРТА ЗА КОНТАКТИ -->
+        <h2>Contact & Community</h2>
+        <div class="card">
+            <p>Follow the development or join our community:</p>
+            <a href="https://github.com" class="contact-link" target="_blank">GitHub Project</a>
+            <a href="https://discord.gg" class="contact-link" target="_blank">Discord Server</a>
         </div>
 
         <h2>Download</h2>
